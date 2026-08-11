@@ -1,7 +1,9 @@
+package Modul320.WO1;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BetragW01 {
+public class AccApplication {
     public static void main(String[] args) {
         int amount = 0;
         char operation;
