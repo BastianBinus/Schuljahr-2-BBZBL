@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BetragW01 {
@@ -6,8 +7,7 @@ public class BetragW01 {
         char operation;
         int amountToAdd;
         Scanner scanner = new Scanner(System.in);
-        String[] abrechnungen = new String[100];
-        int index = 0;
+        ArrayList<String> transactions = new ArrayList<String>();
 
         System.out.println("Welcome to the account application");
         System.out.println("Please enter the amount, 0 (zero) to terminate: ");
@@ -19,13 +19,11 @@ public class BetragW01 {
             operation = scanner.next().charAt(0);
 
             if (operation == '+') {
-                abrechnungen[index] = "Deposit: " + amountToAdd;
-                index++;
+                transactions.add("Deposit: " + amountToAdd);
                 amount += amountToAdd;
 
             } else if (operation == '-') {
-                abrechnungen[index] = "Withdrawal: " + amountToAdd;
-                index++;
+                transactions.add("Withdrawal: " + amountToAdd);
                 amount -= amountToAdd;
 
             } else if (operation == '=') {
@@ -45,8 +43,8 @@ public class BetragW01 {
 
         System.out.println("Final amount: " + amount);
         System.out.println("Transaction History:");
-        for (int i = 0; i < index; i++) {
-            System.out.println(abrechnungen[i]);
+        for (String transaction : transactions) {
+            System.out.println(transaction);
         }
     }
 }
