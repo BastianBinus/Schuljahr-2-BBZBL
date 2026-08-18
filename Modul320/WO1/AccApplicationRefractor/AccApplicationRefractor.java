@@ -6,7 +6,7 @@ public class AccApplicationRefractor {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int amountToAdd;
-        Account Sparkonto = new Account();
+        Account Sparkonto = new Account(100);
         char operation;
         System.out.println("Welcome to the account application");
         do {
